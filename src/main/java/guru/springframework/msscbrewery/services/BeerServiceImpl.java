@@ -25,7 +25,7 @@ public class BeerServiceImpl implements BeerService {
     }
 
     @Override
-    public BeerDto savedBeerDtp(BeerDto beerDto) {
+    public BeerDto savedBeerDto(BeerDto beerDto) {
         return BeerDto.builder()
                 .id(UUID.randomUUID())
                 .build();
@@ -39,6 +39,6 @@ public class BeerServiceImpl implements BeerService {
 
     @Override
     public void deleteBeerById(UUID beerId) {
-        log.debug("Deleting a beer...");
+        log.debug("Deleting beer...");
     }
 }

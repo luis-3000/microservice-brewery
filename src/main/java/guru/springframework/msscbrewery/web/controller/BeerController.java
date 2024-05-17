@@ -31,11 +31,11 @@ public class BeerController {
     @PostMapping() // POST - create a new beer
     public ResponseEntity handlePost(@RequestBody BeerDto beerDto) {
 
-        BeerDto savedBeetDto = beerService.savedBeerDtp(beerDto);
+        BeerDto savedBeetDto = beerService.savedBeerDto(beerDto);
 
         HttpHeaders httpHeaders = new HttpHeaders();
         // @Todo: add a host name to url
-        httpHeaders.add("Location", "http://localhost:8080/api/v1/beer/" + savedBeetDto.getId().toString());
+        httpHeaders.add("Location", "/api/v1/beer/" + savedBeetDto.getId().toString());
         return  new ResponseEntity(httpHeaders, HttpStatus.CREATED);
     }
 
