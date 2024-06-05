@@ -15,6 +15,10 @@ import java.util.UUID;
 @Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
+
+//    private final BeerRepository beerRepository;
+//    private final BeerMapper beerMapper;
+
     @Override
     public BeerDto getBeerById(UUID beerId) {
         return BeerDto.builder()
@@ -41,4 +45,15 @@ public class BeerServiceImpl implements BeerService {
     public void deleteBeerById(UUID beerId) {
         log.debug("Deleting beer...");
     }
+
+    @Override
+    public Object saveNewBeer(Object any) {
+        return new Object();
+    }
+//
+//    @Override
+//    public BeerDto saveNewBeer(BeerDto beerDto) {
+//        return new BeerDto();
+//    }
+
 }

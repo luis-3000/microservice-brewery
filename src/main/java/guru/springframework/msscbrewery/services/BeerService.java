@@ -15,4 +15,6 @@ public interface BeerService {
     void updateBeer(UUID beerId, BeerDto beerDto);
 
     void deleteBeerById(UUID beerId);
+
+    Object saveNewBeer(java.lang.Object any);
 }
